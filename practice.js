@@ -111,7 +111,7 @@ ageVerify.call(per2);
         firstName : 'john',
         lastName :'sander',
         fullName : function(){
-        console.log(`my fullname is ${this.firstName} ${this.lastName}`)
+        console.log(`my fullname is ${this.firstName} ${this.lastName}`) 
        
         } 
     }
