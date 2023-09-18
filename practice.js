@@ -105,7 +105,7 @@ const per1 = {age: 21};
 const per2 = {age: 16};
 ageVerify.call(per1);
 ageVerify.call(per2);
-/*---- constractor example------*/
+/*---- constractor example------
  function createperson(){
     return{
         firstName : 'john',
@@ -118,7 +118,49 @@ ageVerify.call(per2);
 
 }
 const john = createperson()
-john.fullName()
+john.fullName()*/
+/*--------------- Arrow function -------------
+const square = number=> number*number;
+console.log(square(5));*/
+/*-----------------
+function doYouLikeApples(bool) {
+    if (bool) {
+      let str = "Apples are delicious!";
+    } else {
+      str = "Maybe oranges would be better.";
+    }
+    return str;
+  }
+  function doYouLikeApples(bool) {
+    if (bool) {
+      var str = "Apples are delicious!";
+    } else {
+      str = "Maybe oranges would be better.";
+    }
+    return str;
+  }
+   doYouLikeApples(); */
+   /*---------------------------
+   function fun()
+{
+	var temp ="temp is defined in function scope";
+	//console.log(temp); 
+}
+
+fun();
+console.log(temp);*/
+/*------------------------------------*/
+if(true)
+{
+  var v1 =10;
+  let v2=20;
+  console.log(v1);
+  //console.log(v2); 
+}
+
+console.log(v1);
+console.log(v2);
+    
 
 
 
