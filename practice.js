@@ -149,7 +149,7 @@ function doYouLikeApples(bool) {
 
 fun();
 console.log(temp);*/
-/*------------------------------------*/
+/*------------------------------------
 if(true)
 {
   var v1 =10;
@@ -159,8 +159,25 @@ if(true)
 }
 
 console.log(v1);
-console.log(v2);
-    
+console.log(v2);*/
+/*-------------------
+let str = `Template literal in ES6`;
+
+console.log(str);// Template literal in ES6
+console.log(str.length); // 23
+console.log(typeof str);// string*/
+/*------------------------------------
+let strWithBacktick = `Template literals use backticks  insead of quotes`;
+console.log(strWithBacktick);*/
+/*-------------- arrow function-----------
+let add = function(a,b){
+    return a + b;
+}
+console.log(add(10, 20));*/
+/*------------- arrow function-----------*/
+let add = (a,b) =>a+b;
+console.log(add(20,40));
+
 
 
 
