@@ -174,9 +174,117 @@ let add = function(a,b){
     return a + b;
 }
 console.log(add(10, 20));*/
-/*------------- arrow function-----------*/
+/*------------- arrow function-----------
 let add = (a,b) =>a+b;
-console.log(add(20,40));
+console.log(add(20,40));*/
+/*-------------------------------------------
+function Employee(firstName, department, salary) { 
+    this.firstName = firstName; 
+    this.department = department; 
+    this.salary = salary; 
+
+    this.getInfo = function() { 
+        // outer function context = Employee object 
+        return function () { 
+            // inner function context = Global object 
+            console.log(this.firstName + " from " + this.department + " earns " + this.salary); 
+        }; 
+    } 
+} 
+let anEmp = new Employee('Jim', 'Finance', 5200); 
+anEmp.getInfo(); 
+const num1 = 30;
+const num2 = 50;
+// const num1 = 70;
+
+function add() {
+  console.log(`the result is : ${num1 + num2}`);
+}
+add();
+
+(function () {
+  const num3 = 30;
+  const num4 = 50;
+  console.log(`the result is : ${num3 + num4}`);
+})();
+
+console.log(num1);
+
+(function () {
+  const num3 = 30;
+  const num4 = 50;
+  console.log(`the result is : ${num3 + num4}`);
+})();
+// pass arguments
+(function (num3, num4) {
+  console.log(`the result is : ${num3 + num4}`);
+})(500, 900);
+
+// return/assing to variable
+const result = (function (num3, num4) {
+  console.log(`the result is : ${num3 + num4}`);
+  return num3 + num4;
+})(500, 900);
+
+console.log(result);
+function filter(numbers) {
+  let results = [];
+  for (const number of numbers) {
+    if (number % 2 != 0) {
+      results.push(number);
+    }
+  }
+  return results;
+}
+
+let numbers = [1, 2, 4, 7, 3, 5, 6];
+console.log(filter(numbers));*/
+// callbacks, promises, async/await
+// must have async
+// await waits till promise is settled
+// error handling - try/catch
+
+// async function someFunction (){
+//   await
+// }
+// const otherFunction = async() =>{
+//   await
+// }
+
+const heading1 = document.querySelector('.one');
+const heading2 = document.querySelector('.two');
+const heading3 = document.querySelector('.three');
+const btn = document.querySelector('.btn');
+btn.addEventListener('click', async () => {
+  const result = await displayColor();
+  console.log(result);
+});
+
+async function displayColor() {
+  try {
+    const first = await addColor(1000, heading1, 'red');
+    await addColor(1000, heading2, 'green');
+    await addColor(1000, heading3, 'blue');
+    console.log(first);
+  } catch (error) {
+    console.log(error);
+  }
+  return 'hello';
+}
+
+function addColor(time, element, color) {
+  return new Promise((resolve, reject) => {
+    if (element) {
+      setTimeout(() => {
+        element.style.color = color;
+        resolve();
+      }, time);
+    } else {
+      reject(new Error(`There is no such element ${element}`));
+    }
+  });
+}
+
 
 
 
